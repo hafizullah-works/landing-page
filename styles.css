@@ -1,4 +1,4 @@
-
+/* ===== styles.css ===== */
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +11,9 @@ body {
     padding: 30px;
 }
 
-.page-label {
-    font-size: 14px;
-    color: #8a8a8a;
-    margin: 20px 0 10px 0;
-}
-
-/* ===== NAVBAR ===== */
+/* ======================================= */
+/* SECTION 1: NAVBAR - RESPONSIVE */
+/* ======================================= */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -58,7 +54,57 @@ body {
     cursor: pointer;
 }
 
-/* ===== HERO ===== */
+/* Navbar Responsive */
+@media (max-width: 992px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .quote-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    .logo img {
+        width: 24px;
+    }
+    
+    .menu {
+        gap: 15px;
+    }
+    
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 2: HERO - RESPONSIVE */
+/* ======================================= */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -83,6 +129,7 @@ body {
     color: #555;
     line-height: 1.6;
     margin-bottom: 30px;
+    max-width: 550px;
 }
 
 .consult-btn {
@@ -103,7 +150,64 @@ body {
     width: 100%;
 }
 
-/* ===== CLIENTS ===== */
+/* Hero Responsive */
+@media (max-width: 992px) {
+    .hero {
+        flex-wrap: wrap-reverse;
+        gap: 40px;
+    }
+    
+    .hero-left {
+        width: 100%;
+    }
+    
+    .hero-right {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .hero-left h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 25px;
+    }
+    
+    .hero-left h1 {
+        font-size: 36px;
+    }
+    
+    .hero-left h1 br {
+        display: none;
+    }
+    
+    .hero-left p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 20px;
+    }
+    
+    .hero-left h1 {
+        font-size: 28px;
+    }
+    
+    .consult-btn {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 3: CLIENTS - RESPONSIVE */
+/* ======================================= */
 .clients {
     display: flex;
     justify-content: space-between;
@@ -119,7 +223,39 @@ body {
     opacity: 0.7;
 }
 
-/* ===== SERVICES ===== */
+/* Clients Responsive */
+@media (max-width: 992px) {
+    .clients {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .clients {
+        padding: 20px;
+        gap: 25px;
+    }
+    
+    .clients img {
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients {
+        gap: 20px;
+    }
+    
+    .clients img {
+        height: 18px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 4: SERVICES - RESPONSIVE */
+/* ======================================= */
 .services {
     max-width: 1200px;
     margin: auto;
@@ -138,6 +274,7 @@ body {
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 28px;
+    white-space: nowrap;
 }
 
 .services-header p {
@@ -232,15 +369,83 @@ body {
     color: black;
 }
 
-/* ===== CTA ===== */
+/* Services Responsive */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .services-header h2 {
+        font-size: 24px;
+    }
+    
+    .services-header p {
+        font-size: 15px;
+    }
+    
+    .card {
+        padding: 30px;
+    }
+    
+    .card-content h3 {
+        font-size: 22px;
+    }
+    
+    .card img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        padding: 60px 15px;
+    }
+    
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+        gap: 20px;
+    }
+    
+    .card img {
+        align-self: flex-end;
+        width: 80px;
+    }
+    
+    .card-content h3 {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .card-content span,
+    .card-content spa {
+        font-size: 14px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 5: CTA - RESPONSIVE */
+/* ======================================= */
 .cta {
-    padding: 70px 0;
+    padding: 70px 20px;
     display: flex;
     justify-content: center;
 }
 
 .cta-box {
     width: 1100px;
+    max-width: 100%;
     background: #eee;
     border-radius: 30px;
     padding: 50px;
@@ -274,9 +479,62 @@ body {
 
 .cta-img img {
     width: 260px;
+    max-width: 100%;
 }
 
-/* ===== CASE STUDIES ===== */
+/* CTA Responsive */
+@media (max-width: 992px) {
+    .cta-box {
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 40px;
+    }
+    
+    .cta-text {
+        width: 100%;
+    }
+    
+    .cta-img {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-box {
+        padding: 30px;
+    }
+    
+    .cta-text h2 {
+        font-size: 28px;
+    }
+    
+    .cta-text p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-box {
+        padding: 25px;
+    }
+    
+    .cta-text h2 {
+        font-size: 24px;
+    }
+    
+    .cta-text button {
+        width: 100%;
+    }
+    
+    .cta-img img {
+        width: 200px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 6: CASE STUDIES - RESPONSIVE */
+/* ======================================= */
 .case-studies {
     padding: 80px 20px;
     background: #f5f5f5;
@@ -301,6 +559,7 @@ body {
     font-size: 26px;
     font-weight: 700;
     border-radius: 6px;
+    white-space: nowrap;
 }
 
 .desc {
@@ -353,14 +612,63 @@ body {
     height: 120px;
 }
 
-/* ===== PROCESS ===== */
+/* Case Studies Responsive */
+@media (max-width: 992px) {
+    .case-box {
+        flex-direction: column;
+        padding: 40px;
+        gap: 30px;
+    }
+    
+    .divider {
+        width: 100%;
+        height: 1px;
+    }
+    
+    .case-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .tag {
+        font-size: 22px;
+    }
+    
+    .desc {
+        font-size: 15px;
+    }
+    
+    .case-box {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-box {
+        padding: 25px;
+    }
+    
+    .case-item p {
+        font-size: 14px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 7: PROCESS - RESPONSIVE */
+/* ======================================= */
 .process-header {
-    width: 800px;
-    height: 80px;
+    max-width: 900px;
+    margin: 40px auto;
     display: flex;
     align-items: center;
     gap: 15px;
-    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .title {
@@ -368,6 +676,7 @@ body {
     padding: 6px 12px;
     font-size: 28px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .subtitle {
@@ -378,6 +687,7 @@ body {
 .accordion {
     max-width: 900px;
     margin: auto;
+    padding: 0 20px;
 }
 
 .item {
@@ -424,6 +734,7 @@ body {
     border: 2px solid #222;
     border-radius: 50%;
     position: relative;
+    flex-shrink: 0;
 }
 
 .icon::before,
@@ -467,7 +778,68 @@ body {
     font-size: 14px;
 }
 
-/* ===== TEAM ===== */
+.item.active .content {
+    max-height: 300px;
+}
+
+/* Process Responsive */
+@media (max-width: 768px) {
+    .process-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .header {
+        padding: 20px 25px;
+    }
+    
+    .left {
+        gap: 15px;
+    }
+    
+    .number {
+        font-size: 28px;
+    }
+    
+    .header h3 {
+        font-size: 18px;
+    }
+    
+    .content p {
+        padding-left: 60px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .left {
+        gap: 10px;
+    }
+    
+    .number {
+        font-size: 24px;
+    }
+    
+    .header h3 {
+        font-size: 16px;
+    }
+    
+    .content p {
+        padding-left: 45px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 8: TEAM - RESPONSIVE */
+/* ======================================= */
 .team {
     max-width: 1200px;
     margin: auto;
@@ -485,8 +857,6 @@ body {
     background: #a7ef54;
     padding: 6px 16px;
     font-size: 28px;
-    font-weight: 600;
-    border-radius: 6px;
 }
 
 .team-header p {
@@ -508,7 +878,6 @@ body {
     border-radius: 40px;
     border: 2px solid #1c1c1c;
     box-shadow: 0 6px 0 #1c1c1c;
-    position: relative;
     transition: .3s;
 }
 
@@ -527,10 +896,8 @@ body {
     height: 70px;
     background: #a7ef54;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .avatar img {
@@ -548,6 +915,7 @@ body {
 .team-card span {
     font-size: 14px;
     color: #555;
+    display: block;
 }
 
 .team-card .divider {
@@ -574,13 +942,65 @@ body {
     border: none;
     padding: 14px 28px;
     border-radius: 12px;
-    font-size: 14px;
     cursor: pointer;
 }
 
-/* ===== TESTIMONIALS ===== */
+/* Team Responsive */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .team-header .tag {
+        font-size: 24px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        padding: 25px;
+    }
+    
+    .card-top {
+        gap: 15px;
+    }
+    
+    .avatar {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .team-card h3 {
+        font-size: 17px;
+    }
+    
+    .team-card span {
+        font-size: 13px;
+    }
+    
+    .team-btn button {
+        width: 100%;
+    }
+}
+
+/* ======================================= */
+/* SECTION 9: TESTIMONIALS - RESPONSIVE */
+/* ======================================= */
 .testimonials {
-    padding: 80px;
+    padding: 80px 20px;
     background: #f4f4f4;
 }
 
@@ -596,6 +1016,7 @@ body {
     padding: 8px 16px;
     font-weight: 600;
     border-radius: 6px;
+    white-space: nowrap;
 }
 
 .testimonial-desc {
@@ -609,8 +1030,6 @@ body {
     background: #0d1020;
     border-radius: 40px;
     padding: 70px 60px;
-    position: relative;
-    overflow: hidden;
 }
 
 .testimonial-cards {
@@ -625,11 +1044,9 @@ body {
     border-radius: 28px;
     padding: 30px;
     color: #fff;
-    width: 340px;
-    position: relative;
-    line-height: 1.6;
-    font-size: 14px;
+    max-width: 340px;
     background: #0d1020;
+    position: relative;
 }
 
 .bubble::after {
@@ -654,6 +1071,7 @@ body {
 .testimonial-card span {
     font-size: 13px;
     color: #aaa;
+    display: block;
 }
 
 .testimonial-nav {
@@ -672,7 +1090,6 @@ body {
 
 .stars span {
     color: #aaa;
-    font-size: 16px;
     margin: 0 4px;
 }
 
@@ -680,9 +1097,49 @@ body {
     color: #b9ff66;
 }
 
-/* ===== CONTACT ===== */
+/* Testimonials Responsive */
+@media (max-width: 992px) {
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .testimonial-box {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .testimonial-box {
+        padding: 40px 20px;
+    }
+    
+    .bubble {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-nav {
+        gap: 20px;
+    }
+    
+    .bubble::after {
+        left: 40px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 10: CONTACT - RESPONSIVE */
+/* ======================================= */
 .contact-section {
-    padding: 80px;
+    padding: 80px 20px;
     background-color: #f3f3f3;
 }
 
@@ -699,15 +1156,13 @@ body {
     font-size: 22px;
     font-weight: 700;
     border-radius: 6px;
-    line-height: 1;
-    user-select: none;
+    white-space: nowrap;
 }
 
 .contact-desc {
     max-width: 400px;
     font-size: 14px;
-    color: #222222;
-    line-height: 1.4;
+    color: #222;
 }
 
 .contact-container {
@@ -715,15 +1170,13 @@ body {
     border-radius: 40px;
     padding: 68px 80px;
     display: flex;
-    position: relative;
-    overflow: hidden;
-    align-items: flex-start;
     gap: 48px;
+    overflow: hidden;
 }
 
 .contact-form {
     width: 450px;
-    z-index: 2;
+    flex-shrink: 0;
 }
 
 .radio-group {
@@ -737,10 +1190,7 @@ body {
     align-items: center;
     gap: 10px;
     font-size: 14px;
-    font-weight: 400;
     cursor: pointer;
-    user-select: none;
-    color: #000000;
 }
 
 .radio input {
@@ -750,11 +1200,10 @@ body {
 .radio span {
     width: 18px;
     height: 18px;
-    border: 2px solid #111111;
+    border: 2px solid #111;
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    flex-shrink: 0;
 }
 
 .radio input:checked + span {
@@ -781,9 +1230,7 @@ body {
     display: block;
     margin-bottom: 8px;
     font-size: 13px;
-    font-weight: 500;
     color: #1c1c1c;
-    user-select: none;
 }
 
 .form-group input,
@@ -791,26 +1238,11 @@ body {
     width: 100%;
     padding: 14px 18px;
     border-radius: 10px;
-    border: 1px solid #444444;
+    border: 1px solid #444;
     background: transparent;
     font-size: 14px;
-    font-weight: 400;
-    color: #000000;
-    outline-offset: 2px;
-    outline-color: transparent;
-    transition: outline-color 0.2s ease;
+    color: #000;
     resize: none;
-    caret-color: #b9ff66;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #a0a0a0;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline-color: #b9ff66;
 }
 
 .form-group textarea {
@@ -819,44 +1251,103 @@ body {
 
 .send-btn {
     width: 100%;
-    background-color: #121421;
+    background: #121421;
     color: white;
     border: none;
-    padding: 16px 0;
+    padding: 16px;
     border-radius: 12px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 12px;
-    user-select: none;
-    transition: background-color 0.3s ease;
 }
 
-.send-btn:hover,
-.send-btn:focus {
-    background-color: #1a1f33;
-    outline: none;
+.send-btn:hover {
+    background: #1a1f33;
 }
 
 .contact-image-wrapper {
     position: relative;
-    width: 420px;
-    height: 420px;
-    flex-shrink: 0;
+    flex: 1;
 }
 
 .contact-image {
-    position: absolute;
-    right: -300px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 420px;
-    user-select: none;
-    pointer-events: none;
-    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
 }
 
-/* ===== FOOTER ===== */
+/* Contact Responsive */
+@media (max-width: 1200px) {
+    .contact-container {
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+    
+    .contact-form {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .contact-image-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-badge {
+        font-size: 20px;
+    }
+    
+    .contact-container {
+        padding: 30px 25px;
+    }
+    
+    .radio-group {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 25px 20px;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+    }
+    
+    .send-btn {
+        padding: 14px;
+    }
+}
+
+/* ======================================= */
+/* SECTION 11: FOOTER - RESPONSIVE */
+/* ======================================= */
 .footer {
     background: #0f1320;
     border-radius: 40px 40px 0 0;
@@ -875,8 +1366,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-    flex-wrap: wrap;
-    gap: 30px;
 }
 
 .footer-logo {
@@ -887,7 +1376,6 @@ body {
 
 .footer-logo img {
     width: 36px;
-    height: 36px;
     filter: brightness(0) invert(1);
 }
 
@@ -899,7 +1387,6 @@ body {
 .footer-nav {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .footer-nav a {
@@ -926,8 +1413,7 @@ body {
     background: #fff;
     border-radius: 50%;
     color: #0f1320;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .footer-social a:hover {
@@ -940,7 +1426,6 @@ body {
     justify-content: space-between;
     gap: 40px;
     margin-bottom: 50px;
-    flex-wrap: wrap;
 }
 
 .footer-contact h3 {
@@ -956,7 +1441,6 @@ body {
 .footer-contact p {
     color: #ccc;
     line-height: 1.8;
-    margin: 5px 0;
 }
 
 .footer-subscribe {
@@ -965,7 +1449,6 @@ body {
     border-radius: 14px;
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
     min-width: 400px;
 }
 
@@ -991,14 +1474,8 @@ body {
     padding: 15px 25px;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 14px;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.footer-subscribe button:hover {
-    background: #a0e64b;
-    transform: translateY(-2px);
+    white-space: nowrap;
 }
 
 .footer-bottom {
@@ -1007,8 +1484,6 @@ body {
     align-items: center;
     padding-top: 30px;
     border-top: 1px solid #2B2F43;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .footer-bottom p,
@@ -1025,50 +1500,78 @@ body {
     color: #B9FF66;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Footer Responsive */
+@media (max-width: 992px) {
     .footer {
-        padding: 40px 30px 20px;
+        padding: 50px 40px 30px;
     }
     
     .footer-top {
         flex-direction: column;
+        gap: 30px;
         text-align: center;
     }
     
     .footer-nav {
+        flex-wrap: wrap;
         justify-content: center;
     }
     
     .footer-middle {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
     .footer-subscribe {
         min-width: auto;
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 30px 25px;
+    }
+    
+    .footer-subscribe {
+        flex-direction: column;
+    }
+    
+    .footer-subscribe button {
         width: 100%;
     }
     
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
     }
 }
-@media (max-width: 600px) {
-    .tag {
-        font-size: 22px;
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 20px 20px;
     }
-    .case-box {
-        padding: 35px 25px;
+    
+    .footer-nav {
+        gap: 20px;
     }
-    .case-item p {
+    
+    .footer-nav a {
         font-size: 14px;
     }
-    .team-grid {
-        grid-template-columns: 1fr;
+    
+    .footer-subscribe {
+        padding: 20px;
     }
-    .team-header {
-        flex-direction: column;
-        align-items: flex-start;
+    
+    .footer-subscribe input {
+        padding: 12px;
+    }
+    
+    .footer-subscribe button {
+        padding: 12px;
     }
 }
